@@ -1,0 +1,11 @@
+"Window" : {
+	title:'Accelerometer: Basic orientation.',
+	backgroundColor:'#fff'
+}
+"#dot" : {
+	backgroundColor: "#000",
+	width: 20,
+    height: 20,
+    left: 250,
+    top: 400
+}

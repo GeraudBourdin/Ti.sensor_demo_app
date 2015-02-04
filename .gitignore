@@ -1,0 +1,17 @@
+.DS_Store
+Resources
+build.log
+build
+npm-debug.log
+tmp
+.map
+.project
+.settings
+Thumbs.db*.merge-left*
+*.merge-right*
+*.mine
+*.prej
+*.working
+.svn
+_svn
+svn-commit*.tmp

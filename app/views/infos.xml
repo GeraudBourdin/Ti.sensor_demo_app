@@ -1,0 +1,30 @@
+<Alloy>
+	<Window>
+		<ScrollView>
+			<View height="25">
+				<Label>Name:</Label><Label id="name">-</Label>
+			</View>
+			<View height="25">
+				<Label>Constant int:</Label><Label id="constant">-</Label>
+			</View>
+			<View height="25">
+				<Label>Version:</Label><Label id="version">-</Label>
+			</View>
+			<View height="45">
+				<Label>Resolution (in the sensor unit):</Label><Label id="resolution">-</Label>
+			</View>
+			<View height="25">
+				<Label>Power in mA used by this sensor while in use:</Label><Label id="power">-</Label>
+			</View>
+			<View height="25">
+				<Label>Vendor:</Label><Label id="vendor">-</Label>
+			</View>
+			<View height="55">
+				<Label>Maximum range of the sensor in the sensor's unit:</Label><Label id="maximumRange">-</Label>
+			</View>
+			<View height="80">
+				<Label>Minimum delay allowed between two events in microsecond or zero if this sensor only returns a value when the data it's measuring changes:</Label><Label id="minDelay">-</Label>
+			</View>
+		</ScrollView>
+	</Window>
+</Alloy>

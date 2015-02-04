@@ -1,0 +1,7 @@
+<Alloy>
+	<Window id="win">
+		<View id="square" width="100%" height="100%">
+			<Label id="degrees"></Label>
+		</View>
+	</Window>
+</Alloy>

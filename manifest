@@ -1,0 +1,8 @@
+#appname:ti_sensor_demo_app
+#publisher:Géraud Bourdin
+#url:http://
+#image:appicon.png
+#appid:com.geraudbourdin.sensor.demo.app
+#desc:Demo app, for the all in one Titanium android sensor module
+#type:mobile
+#guid:a17ef8b1-d6c2-4298-b79e-cbf8c28037f6

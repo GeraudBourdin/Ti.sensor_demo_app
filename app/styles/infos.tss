@@ -1,0 +1,17 @@
+"Window": {
+	backgroundColor:"white",
+	layout:'vertical'
+}
+"ScrollView": {
+	width: Ti.UI.SIZE,
+    height: Ti.UI.SIZE,
+	layout:'vertical'
+}
+"Label": {
+	color:"black",
+	left:5
+}
+"View": {
+	width:"100%",
+	layout:'horizontal'
+}

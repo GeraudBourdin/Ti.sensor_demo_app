@@ -1,0 +1,11 @@
+"Window" : {
+	title:'Compass test',
+	backgroundColor:'#fff'
+}
+"#square" : {
+	backgroundImage : '/compassBg.png',
+}
+"#degrees" : {
+	top:10,
+	color : 'white',
+}

@@ -1,0 +1,45 @@
+"Window": {
+	backgroundColor:"white",
+	exitOnClose:true
+}
+
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+}
+"#start": {
+	title:"Start", 
+	width:"150", 
+	height:"50",  
+	top:"10", 
+	left:"10"
+}
+"#stop": {
+	title:"Stop", 
+	width:"150", 
+	height:"50",  
+	top:"10", 
+	right:"10"
+}
+
+".view_sensorDetails": {
+	 top:"10",
+	 height:"100",
+	 width:"100%",
+	 borderWidth:"3",
+	 borderColor:"black"
+}
+	".view_sensorLabel": {
+		top:"10",
+		width:"100%",
+		height:"20",
+		layout:"horizontal"
+	}
+		".statusLabel": {
+			font: {
+				fontSize: 15
+			},
+			color:'red',
+			left: '5px'
+		}

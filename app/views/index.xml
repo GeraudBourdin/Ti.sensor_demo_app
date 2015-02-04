@@ -1,0 +1,161 @@
+<Alloy>
+	<Window>
+		<ScrollView layout="vertical" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="true" height="100%" width="100%">
+			<View id="view_accelerometer"  class="view_sensorDetails" height="70" >
+				<Button id="start"/>
+				<Button id="stop"/>
+			</View>
+            <View id="view_accelerometer"  class="view_sensorDetails" height="350">
+            	<View class="view_sensorLabel" id="view_accelerometerLabel" height='70' width="100%"><Label left="5">Accelerometer: </Label><Label id="status_accelerometer" class="statusLabel">No.</Label></View>
+            	<View layout="vertical" top="70">
+            		<Label id="accelerometerLabelx" left="5" top="5">-</Label>
+            		<Label id="accelerometerLabely" left="5" top="5">-</Label>
+            		<Label id="accelerometerLabelz" left="5" top="5">-</Label>
+            		<Label id="linearAccelerationX" left="5" top="5">-</Label>
+            		<Label id="linearAccelerationY" left="5" top="5">-</Label>
+            		<Label id="linearAccelerationZ" left="5" top="5">-</Label>
+            		<Button id="accelerometerDemo1" title="Basic orientation" top="10" width="250" height="50" />
+            		<Button id="accelerometerDemo2" title="Linear accelleration" top="10" width="250" height="50" />
+            	</View>
+            </View>
+            <View id="view_magnetic_field" class="view_sensorDetails" height="350">
+            	<View top="10"  layout="horizontal" id="view_magneticFiledLabel" height='70' width="100%"><Label left="5">Magnetic field: </Label><Label id="status_magnetic_field" class="statusLabel">No.</Label></View>
+           		<View layout="vertical"  top="70">
+            		<Label id="magneticFieldLabelx" left="5" top="5">-</Label>
+            		<Label id="magneticFieldLabely" left="5" top="5">-</Label>
+            		<Label id="magneticFieldLabelz" left="5" top="5">-</Label>
+            		<Label id="azimuth" left="5" top="5">-</Label>
+            		<Label id="pitch" left="5" top="5">-</Label>
+            		<Label id="roll" left="5" top="5">-</Label>
+            		<Button id="magneticFiledDemo1" title="Compass" top="10" width="250" height="50" />
+            		<Button id="magneticFiledDemo2" title="Metal detector" top="10" width="250" height="50" />
+            	</View>
+            </View>
+            <View id="view_orientation" class="view_sensorDetails" height="200">
+            	<View top="10" layout="horizontal" id="view_orientationLabel" height='70' width="100%"><Label left="5">Orientation: </Label><Label id="status_orientation" class="statusLabel">No.</Label></View>
+       			<View layout="vertical"  top="70">
+            		<Label id="orientationLabel" left="5" top="5">-</Label>
+            		<Button id="orientationDemo" title="Compass" top="10" width="250" height="50" />
+            	</View>
+            </View>
+            <View id="view_ambient_temperature" class="view_sensorDetails" height="250">
+            	<View top="10"  layout="horizontal" id="view_ambientTemperatureLabel" height='70' width="100%"><Label left="5">Ambient temperature: </Label><Label id="status_ambient_temperature" class="statusLabel">No.</Label></View>
+            	<View layout="vertical"  top="70">
+            		<Label id="ambientTemperatureLabelCelcius" left="5" top="5">-</Label>
+            		<Label id="ambientTemperatureLabelFahrenheit" left="5" top="5">-</Label>
+            	</View>
+            </View>
+
+            <View id="view_gravity" class="view_sensorDetails" height="350">
+            	<View top="10" layout="horizontal" id="view_gravityLabel" height='70' width="100%"><Label left="5">Gravity: </Label><Label id="status_gravity" class="statusLabel">No.</Label></View>
+           		 <View layout="vertical"  top="70">
+            		<Label id="gravityLabelX" left="5" top="5">-</Label>
+            		<Label id="gravityLabelY" left="5" top="5">-</Label>
+            		<Label id="gravityLabelZ" left="5" top="5">-</Label>
+            		<Button id="gravityDemo1" title="Basic orientation" top="10" width="250" height="50" />
+            	</View>
+            </View>
+            <View id="view_gyroscope" class="view_sensorDetails" height="350">
+            	<View top="10" layout="horizontal" id="view_gyroscopeLabel" height='70' width="100%"><Label left="5">Gyroscope: </Label><Label id="status_gyroscope" class="statusLabel">No.</Label></View>
+           		 <View layout="vertical"  top="70">
+            		<Label id="gyroscopeLabelRadianX" left="5" top="5">-</Label>
+            		<Label id="gyroscopeLabelRadianY" left="5" top="5">-</Label>
+            		<Label id="gyroscopeLabelRadianZ" left="5" top="5">-</Label>
+            		<Label id="gyroscopeLabelDegreesX" left="5" top="5">-</Label>
+            		<Label id="gyroscopeLabelDegreesY" left="5" top="5">-</Label>
+            		<Label id="gyroscopeLabelDegreesZ" left="5" top="5">-</Label>
+            	</View>
+            </View>
+            <View id="view_light" class="view_sensorDetails">
+            	<View top="10" layout="horizontal" id="view_lightLabel" height='70' width="100%"><Label left="5">Light: </Label><Label id="status_light" class="statusLabel">No.</Label></View>
+            	<View layout="vertical"  top="70">
+            		<Label id="lightLabelLux" left="5" top="5">-</Label>
+            	</View>
+            </View>
+            <View id="view_linear_acceleration" class="view_sensorDetails" height="250">
+            	<View top="10" layout="horizontal" id="view_linearAccelerationLabel" height='70' width="100%"><Label left="5">Linear acceleration: </Label><Label id="status_linear_acceleration" class="statusLabel">No.</Label></View>
+          		<View layout="vertical"  top="70">
+            		<Label id="linearAccelerationLabelX" left="5" top="5">-</Label>
+            		<Label id="linearAccelerationLabelY" left="5" top="5">-</Label>
+            		<Label id="linearAccelerationLabelZ" left="5" top="5">-</Label>
+            		<Button id="linearAccelerationDemo1" title="Linear accelleration" top="10" width="250" height="50" />
+            	</View>
+            	
+            </View>
+            <View id="view_proximity" class="view_sensorDetails" height="250">
+            	<View top="10" layout="horizontal" id="view_proximityLabel" height='70' width="100%"><Label left="5">Proximity: </Label><Label id="status_proximity" class="statusLabel">No.</Label></View>
+          		<View layout="vertical"  top="70">
+            		<Label id="proximityLabel" left="5" top="5">-</Label>
+            	</View>
+            </View>
+            <View id="view_relative_humidity" class="view_sensorDetails" height="250">
+            	<View top="10" layout="horizontal" id="view_relativeHumidityLabel" height='70' width="100%"><Label left="5">Relative humidity: </Label><Label id="status_relative_humidity" class="statusLabel">No.</Label></View>
+            	<View layout="vertical"  top="70">
+            		<Label id="humidityLabel" left="5" top="5">-</Label>
+            	</View>
+            </View>
+                <View id="view_step_counter" class="view_sensorDetails" height="250" >
+            	<View top="10" layout="horizontal" id="view_stepCounterLabel" height='70' width="100%"><Label left="5">Step counter: </Label><Label id="status_step_counter" class="statusLabel">No.</Label></View>
+           		<View layout="vertical"  top="70">
+            		<Label id="stepCounterLabelVal" left="5" top="5">-</Label>
+            		<Label id="stepCounterLabelCount" left="5" top="5">-</Label>
+            	</View>
+            </View>
+            <View id="view_step_detector" class="view_sensorDetails" height="250">
+            	<View top="10" layout="horizontal" id="view_stepDetectorLabel" height='70' width="100%"><Label left="5">Step detector: </Label><Label id="status_step_detector" class="statusLabel">No.</Label></View>
+           		<View layout="vertical"  top="70">
+            		<Label id="stepDetectorLabel" left="5" top="5">-</Label>
+            	</View>
+            </View>            
+            
+            <View id="view_magnetic_field_uncalibrated" class="view_sensorDetails">
+            	<View top="10" layout="horizontal" id="view_magneticFieldUncalibratedLabel" height='70' width="100%"><Label left="5">Magnetic field uncalibrated: </Label><Label id="status_magnetic_field_uncalibrated" class="statusLabel">No.</Label></View>
+            </View>
+            <View id="view_gyroscope_uncalibrated" class="view_sensorDetails">
+            	<View top="10" layout="horizontal" id="view_gyroscopeUncalibratedLabel" height='70' width="100%"><Label left="5">Gyroscope uncalibrated: </Label><Label id="status_gyroscope_uncalibrated" class="statusLabel">No.</Label></View>
+            </View>
+            <View id="view_heart_rate" class="view_sensorDetails">
+            	<View top="10" layout="horizontal" id="view_heartRateLabel" height='70' width="100%"><Label left="5">Heart rate: </Label><Label id="status_heart_rate" class="statusLabel">No.</Label></View>
+            </View>
+			
+
+            <View id="view_rotation_vector" class="view_sensorDetails">
+            	<View top="10" layout="horizontal" id="view_rotationVectorLabel" height='70' width="100%"><Label left="5">Rotation vector: </Label><Label id="status_rotation_vector" class="statusLabel">No.</Label></View>
+            </View>
+            <View id="view_significant_motion" class="view_sensorDetails">
+            	<View top="10" layout="horizontal" id="view_significantMotionLabel" height='70' width="100%"><Label left="5">Significant motion: </Label><Label id="status_significant_motion" class="statusLabel">No.</Label></View>
+            </View>
+
+
+
+
+
+
+            <View id="view_pressure" class="view_sensorDetails">
+            	<View top="10" layout="horizontal" id="view_pressureLabel" height='70' width="100%"><Label left="5">Pressure: </Label><Label id="status_pressure" class="statusLabel">No.</Label></View>
+            </View>
+            
+
+            <View id="view_game_rotation_vector" class="view_sensorDetails" height="350">
+            	<View top="10" layout="horizontal" id="view_gameRotationVectorLabel" height='70' width="100%"><Label left="5">Game rotation vector: </Label><Label id="status_game_rotation_vector" class="statusLabel">No.</Label></View>
+           		<View layout="vertical"  top="70">
+            		<Label id="gameRotationVectorLabelX" left="5" top="5">-</Label>
+            		<Label id="gameRotationVectorLabelY" left="5" top="5">-</Label>
+            		<Label id="gameRotationVectorLabelZ" left="5" top="5">-</Label>
+            		<Label id="gameRotationVectorLabelCos" left="5" top="5">-</Label>
+            		<Label id="gameRotationVectorLabelheadingAccuracy" left="5" top="5">-</Label>
+            	</View>
+            </View>
+            <View id="view_geomagnetic_rotation_vector" class="view_sensorDetails" height="350">
+            	<View top="10" layout="horizontal" id="view_geomagneticRotationVectorLabel" height='70' width="100%"><Label left="5">Geomagnetic rotation vector: </Label><Label id="status_geomagnetic_rotation_vector" class="statusLabel">No.</Label></View>
+            	<View layout="vertical"  top="70">
+            		<Label id="geomagneticRotationVectorLabelX" left="5" top="5">-</Label>
+            		<Label id="geomagneticRotationVectorLabelY" left="5" top="5">-</Label>
+            		<Label id="geomagneticRotationVectorLabelZ" left="5" top="5">-</Label>
+            		<Label id="geomagneticRotationVectorLabelCos" left="5" top="5">-</Label>
+            		<Label id="geomagneticRotationVectorLabelheadingAccuracy" left="5" top="5">-</Label>
+            	</View>
+            </View>
+        </ScrollView>
+	</Window>
+</Alloy>

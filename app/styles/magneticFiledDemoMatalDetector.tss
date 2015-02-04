@@ -1,0 +1,14 @@
+"Window" : {
+	title:'Accelerometer démo 1',
+	backgroundColor:'#fff'
+}
+"#magnetometer" : {
+	color:'black',
+	font:{fontSize:20},
+	top:10,
+}
+"#messageMetalDetected" : {
+	font:{fontSize:20},
+	color:'red',
+	top:50,
+}

@@ -106,8 +106,8 @@ Ti.Android.currentActivity.addEventListener('resume', function(e) {
 });
 ```
 
-List of constants: 
-
+### List of constants: 
+```javascript
 	sensor.TYPE_ACCELEROMETER
 	sensor.TYPE_AMBIENT_TEMPERATURE
 	sensor.TYPE_GAME_ROTATION_VECTOR
@@ -128,17 +128,20 @@ List of constants:
 	sensor.TYPE_STEP_COUNTER
 	sensor.TYPE_STEP_DETECTOR
 	//sensorsId[sensor.TYPE_HEART_RATE (have to compile module with api 21 to use it).
+```
 
+## functions : 
 
-functions : 
-
-get full list of sensors :
+### get full list of sensors :
+```javascript
  	sensor.getSensorList(sensor.TYPE_ALL);
+```
+###get infos for a specific sensor type :
 
-get infos for a specific sensor type : 
+```javascript 
 	sensor.getSensorInfos(sensor.TYPE_ACCELEROMETER);	
 	
-	return array  : 
+	//return array  : 
 		var infos = sensor.getSensorInfos(type);
 		$.name.text = infos['name'];
 		$.constant.text = infos['constant'];
@@ -148,12 +151,12 @@ get infos for a specific sensor type :
 		$.vendor.text = infos['vendor'];
 		$.maximumRange.text = infos['maximumRange'];
 		$.minDelay.text = infos['minDelay'];
+```		
 		
 		
-		
-Values return for differents types : 
+### Return values for differents types : 
 	
-TYPE_ACCELEROMETER : 
+#### TYPE_ACCELEROMETER : 
      All values are in SI units (m/s^2)
 		e.x: Acceleration minus Gx on the x-axis filtered with a meanFilter to reduce noize and smooth the sensor inputs.
 		e.y: Acceleration minus Gy on the y-axis filtered with a meanFilter to reduce noize and smooth the sensor inputs.

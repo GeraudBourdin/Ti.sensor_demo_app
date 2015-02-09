@@ -1,3 +1,5 @@
+# ti_sensor_demo_app 
+
 Demo project for the all in one Titanium sensor module. (Android only).
 
 

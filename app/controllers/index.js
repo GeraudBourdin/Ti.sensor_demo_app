@@ -122,7 +122,7 @@ for (i in sensorList){
 
 
 }
-
+var significantMotionNumber = 0;
 var sensorsCallback = function(e) {
 	if(e.sType == sensor.TYPE_ACCELEROMETER){
 		$.accelerometerLabelx.text = 'x: ' + e.x;
@@ -181,6 +181,10 @@ var sensorsCallback = function(e) {
 		$.stepDetectorLabel.text  = 'Step: ' + e.count + '.';
 	}else if(e.sType == sensor.TYPE_ORIENTATION){
 		$.orientationLabel.text  = 'Degrees offset: ' + e.orientation + '.';
+	}else if(e.sType == sensor.TYPE_SIGNIFICANT_MOTION){
+		$.significantMotion.text  = 'Motion detected: ' + e.motion + '.';
+		significantMotionNumber++;
+		$.significantMotionNumber.text  = 'Motion detected n°: ' + significantMotionNumber + '.';
 	}
 };
 

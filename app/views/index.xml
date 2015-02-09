@@ -124,6 +124,12 @@
             </View>
             <View id="view_significant_motion" class="view_sensorDetails">
             	<View top="10" layout="horizontal" id="view_significantMotionLabel" height='70' width="100%"><Label left="5">Significant motion: </Label><Label id="status_significant_motion" class="statusLabel">No.</Label></View>
+            	<View layout="vertical"  top="70">
+            		<Label id="significantMotion" left="5" top="5">-</Label>
+            		<Label id="significantMotionNumber" left="5" top="5">-</Label>
+            	</View>
+            
+            
             </View>
 
 

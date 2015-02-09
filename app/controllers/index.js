@@ -193,7 +193,7 @@ Ti.Android.currentActivity.addEventListener('resume', function(e) {
 	Ti.API.info("adding sensorsCallback on resume");
 	sensor.addEventListener('update', sensorsCallback);
 });
-/**/
+
 $.start.addEventListener('click', function(e) {
 	sensor.addEventListener('update', sensorsCallback);
 });

@@ -168,7 +168,7 @@ Ti.Android.currentActivity.addEventListener('resume', function(e) {
 		
 
 
-TYPE_MAGNETIC_FIELD : 
+#### TYPE_MAGNETIC_FIELD : 
 		All values are in micro-Tesla (uT) and measure the ambient magnetic field in the X, Y and Z axis filtered with a meanFilter to reduce noize and smooth the sensor inputs.
 			e.x : in micro-Tesla (uT) and measure the ambient magnetic field in the X axis.
 			e.y : in micro-Tesla (uT) and measure the ambient magnetic field in the Y axis.
@@ -186,13 +186,13 @@ TYPE_MAGNETIC_FIELD :
 			e.pitch : values returned from the getRotationMatrix, remapCoordinateSystem and getOrientation function from the android lib. (See http://www.appcelerator.com/blog/2011/11/forging-titanium-episode-15-twisti-part-2-3d-with-three-js/ for more info)
 			e.roll : values returned from the getRotationMatrix, remapCoordinateSystem and getOrientation function from the android lib. (See http://www.appcelerator.com/blog/2011/11/forging-titanium-episode-15-twisti-part-2-3d-with-three-js/ for more info)
 
-TYPE_AMBIENT_TEMPERATURE :
+#### TYPE_AMBIENT_TEMPERATURE :
 		Ambient (room) temperature
 			e.celcius : ambient (room) temperature in degree Celsius.
 			e.fahrenheit : ambient (room) temperature in degree Fahrenheit.
 				
 
-TYPE_GAME_ROTATION_VECTOR :
+#### TYPE_GAME_ROTATION_VECTOR :
 		Identical to TYPE_ROTATION_VECTOR except that it doesn't use the geomagnetic field. Therefore the Y axis doesn't point north, but instead to some other reference, that reference is allowed to drift by the same order of magnitude as the gyroscope drift around the Z axis.
 		In the ideal case, a phone rotated and returning to the same real-world orientation will report the same game rotation vector (without using the earth's geomagnetic field). However, the orientation may drift somewhat over time. This sensor will not have the estimated heading accuracy value.
 			e.x : rotation vector component along the x axis. x*sin(θ/2).
@@ -201,20 +201,20 @@ TYPE_GAME_ROTATION_VECTOR :
 			e.cos:  cos(θ/2)
 
 
-TYPE_GEOMAGNETIC_ROTATION_VECTOR : 
+#### TYPE_GEOMAGNETIC_ROTATION_VECTOR : 
 		The geomagnetic rotation vector sensor is similar to the Rotation Vector Sensor, but it uses a magnetometer instead of a gyroscope. The accuracy of this sensor is lower than the normal rotation vector sensor, but the power consumption is reduced. Only use this sensor if you want to collect some rotation information in the background without draining too much battery. This sensor is most useful when used in conjunction with batching.
 			e.x : rotation vector component along the x axis. x*sin(θ/2).
 			e.y : rotation vector component along the y axis. y*sin(θ/2).
 			e.z : rotation vector component along the z axis. z*sin(θ/2).
 
-TYPE_GRAVITY : 
+#### TYPE_GRAVITY : 
 		A three dimensional vector indicating the direction and magnitude of gravity. Units are m/s^2. The coordinate system is the same as is used by the acceleration sensor.
 			e.x 
 			e.y  
 			e.z 
 			
 
-TYPE_GYROSCOPE : 
+#### TYPE_GYROSCOPE : 
 		All values are in radians/second and measure the rate of rotation around the device's local X, Y and Z axis. The coordinate system is the same as is used for the acceleration sensor. Rotation is positive in the counter-clockwise direction. That is, an observer looking from some positive location on the x, y or z axis at a device positioned on the origin would report positive rotation if the device appeared to be rotating counter clockwise. Note that this is the standard mathematical definition of positive rotation and does not agree with the definition of roll given earlier.
 			e.x : Angular speed around the x-axis
 			e.y : Angular speed around the y-axis
@@ -230,7 +230,7 @@ TYPE_GYROSCOPE :
 			e.degreesZ : updated rotation around the z-axis in degrees.	
 	
 			
-TYPE_GYROSCOPE_UNCALIBRATED :
+#### TYPE_GYROSCOPE_UNCALIBRATED :
 		All values are in radians/second and measure the rate of rotation around the device's local X, Y and Z axis. The coordinate system is the same as is used for the acceleration sensor. Rotation is positive in the counter-clockwise direction. That is, an observer looking from some positive location on the x, y or z axis at a device positioned on the origin would report positive rotation if the device appeared to be rotating counter clockwise. Note that this is the standard mathematical definition of positive rotation and does not agree with the definition of roll given earlier.
 			e.x : Angular speed around the x-axis
 			e.y : Angular speed around the y-axis
@@ -238,26 +238,26 @@ TYPE_GYROSCOPE_UNCALIBRATED :
 
 
 
-TYPE_HEART_RATE : 
+#### TYPE_HEART_RATE : 
 		Heart rate monitor (not tested).
 			e.rate : heart rate int.
 		
 		
 		
-TYPE_LIGHT : 
+#### TYPE_LIGHT : 
 		Ambient light level in SI lux units
 			e.lux : Ambient light level.
 			
 			
 	
-TYPE_LINEAR_ACCELERATION : 
+#### TYPE_LINEAR_ACCELERATION : 
 		A three dimensional vector indicating acceleration along each device axis, not including gravity. All values have units of m/s^2. The coordinate system is the same as is used by the acceleration sensor.
 			e.x : Acceleration around the x-axis
 			e.y : Acceleration around the y-axis
 			e.z : Acceleration around the z-axis	
 			
 
-TYPE_MAGNETIC_FIELD_UNCALIBRATED :
+#### TYPE_MAGNETIC_FIELD_UNCALIBRATED :
 		Similar to TYPE_MAGNETIC_FIELD, but the hard iron calibration is reported separately instead of being included in the measurement. Factory calibration and temperature compensation will still be applied to the "uncalibrated" measurement. Assumptions that the magnetic field is due to the Earth's poles is avoided.
 		
 		x_uncalib, y_uncalib, z_uncalib are the measured magnetic field in X, Y, Z axes. Soft iron and temperature calibrations are applied. But the hard iron calibration is not applied. The values are in micro-Tesla (uT).
@@ -270,17 +270,17 @@ TYPE_MAGNETIC_FIELD_UNCALIBRATED :
 			e.z_bias
 		
 			
-TYPE_PROXIMITY :
+#### TYPE_PROXIMITY :
 		Proximity sensor distance measured in centimeters
 		Note: Some proximity sensors only support a binary near or far measurement. In this case, the sensor should report its maximum range value in the far state and a lesser value in the near state.
 			e.cm : distance between phone and obstacle in centimeter.
 			
 
-TYPE_RELATIVE_HUMIDITY : 
+#### TYPE_RELATIVE_HUMIDITY : 
 			e.percent : Relative ambient air humidity in percent.
 			
 
-TYPE_ROTATION_VECTOR
+#### TYPE_ROTATION_VECTOR
 		The rotation vector represents the orientation of the device as a combination of an angle and an axis, in which the device has rotated through an angle θ around an axis <x, y, z>.
 		The three elements of the rotation vector are <x*sin(θ/2), y*sin(θ/2), z*sin(θ/2)>, such that the magnitude of the rotation vector is equal to sin(θ/2), and the direction of the rotation vector is equal to the direction of the axis of rotation.
 		The three elements of the rotation vector are equal to the last three components of a unit quaternion <cos(θ/2), x*sin(θ/2), y*sin(θ/2), z*sin(θ/2)>.
@@ -296,23 +296,23 @@ TYPE_ROTATION_VECTOR
 			e.cos:  cos(θ/2)
 			e.headingAccuracy estimated heading Accuracy (in radians) (-1 if unavailable).
 			
-TYPE_SIGNIFICANT_MOTION : 
+#### TYPE_SIGNIFICANT_MOTION : 
 		e.motion : 1.0 when the sensor triggers. 1.0 is the only allowed value.
 		
 		
-TYPE_STEP_COUNTER
+#### TYPE_STEP_COUNTER
 	This sensor also triggers an event upon each detected step, but instead delivers the total accumulated number of steps since this sensor was first registered by an app.
 		e.val :  returns the number of steps taken by the user since the last reboot while activated.
 		e.count :  returns the number of steps taken by the user since the event is registered.
 
-TYPE_STEP_DETECTOR
+#### TYPE_STEP_DETECTOR
 	This sensor triggers an event each time the user takes a step. Upon each user step, this sensor delivers an event with a value of 1.0 and a timestamp indicating when the step occurred.
 		e.count : returns the number of steps taken by the user since the event is registered. 		
 
 	Be aware that these two step sensors don't always deliver the same results. The TYPE_STEP_COUNTER events occur with a higher latency than those from TYPE_STEP_DETECTOR, but that's because the TYPE_STEP_COUNTER algorithm does more processing to eliminate false positives. So the TYPE_STEP_COUNTER may be slower to deliver events, but its results should be more accurate.
 
 
-TYPE_ORIENTATION :
+#### TYPE_ORIENTATION :
 	All values are angles in degrees. Note: This definition is different from yaw, pitch and roll used in aviation where the X axis is along the long side of the plane (tail to nose).
 		e.orientation : Azimuth, angle between the magnetic north direction and the y-axis, around the z-axis (0 to 359). 0=North, 90=East, 180=South, 270=West.
 		e.pitch : Pitch, rotation around x-axis (-180 to 180), with positive values when the z-axis moves toward the y-axis.

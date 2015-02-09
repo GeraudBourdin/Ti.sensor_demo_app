@@ -3,7 +3,7 @@
 Demo project for the all in one Titanium sensor module. (Android only).
 
 
-List of avaliable sensors : 
+## List of avaliable sensors : 
 
 - TYPE_ACCELEROMETER : 
 				Measures the acceleration force in m/s2 that is applied to a device on all three physical axes (x, y, and z), including the force of gravity.
@@ -66,9 +66,9 @@ List of avaliable sensors :
 
 --------------------------------------------------------------
 
-USAGE : 
-
-Import it into your mobile project and add it to your controller :
+## Usage : 
+```javascript
+// Import it into your mobile project and add it to your controller :
 
 var sensor = require('com.geraudbourdin.sensor');
 
@@ -76,8 +76,8 @@ Get list of sensors avaliable on your mobile :
 
 var sensorList = sensor.getSensorList(sensor.TYPE_ALL);
 
-it return list of constant sensors. 
-Just test if sensor is sensor you need is avaliable :
+// it return list of constant sensors. 
+// Just test if sensor is sensor you need is avaliable :
 
 var sensorsCallback = function(e) {
 	if(e.sType == sensor.TYPE_ACCELEROMETER){
@@ -104,7 +104,7 @@ Ti.Android.currentActivity.addEventListener('resume', function(e) {
 	Ti.API.info("adding sensorsCallback on resume");
 	sensor.addEventListener('update', sensorsCallback);
 });
-
+```
 
 List of constants: 
 

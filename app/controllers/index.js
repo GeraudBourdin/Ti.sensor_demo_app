@@ -109,13 +109,18 @@ for (i in sensorList){
 	}	
 	
 	
-	
-	
-	
 	if(sensorList[i] == sensor.TYPE_LINEAR_ACCELERATION){
 		$.linearAccelerationDemo1.addEventListener('click',function(e){
 			sensor.removeEventListener('update', sensorsCallback);
 			Alloy.createController('linearAccelerationDemo').getView().open();
+		});
+	}
+	
+	
+	if(sensorList[i] == sensor.TYPE_LIGHT){
+		$.lightDemo1.addEventListener('click',function(e){
+			sensor.removeEventListener('update', sensorsCallback);
+			Alloy.createController('lightDemo').getView().open();
 		});
 	}
 

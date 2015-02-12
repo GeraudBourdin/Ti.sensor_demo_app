@@ -1,10 +1,21 @@
 <Alloy>
 	<Window>
 		<ScrollView layout="vertical" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="true" height="100%" width="100%">
-			<View id="view_accelerometer"  class="view_sensorDetails" height="70" >
+			
+			<View class="view_sensorDetails" height="70" >
 				<Button id="start"/>
 				<Button id="stop"/>
 			</View>
+			
+			<View id="view_light" class="view_sensorDetails" height="250">
+            	<View top="10" layout="horizontal" id="view_lightLabel" height='70' width="100%"><Label left="5">Light: </Label><Label id="status_light" class="statusLabel">No.</Label></View>
+            	<View layout="vertical"  top="30">
+            		<Label id="lightLabelLux" left="5" top="5">-</Label>
+            		<Button id="lightDemo1" title="Demo" top="10" width="250" height="50" />
+            	</View>
+            </View>	
+            
+            
             <View id="view_accelerometer"  class="view_sensorDetails" height="350">
             	<View class="view_sensorLabel" id="view_accelerometerLabel" height='70' width="100%"><Label left="5">Accelerometer: </Label><Label id="status_accelerometer" class="statusLabel">No.</Label></View>
             	<View layout="vertical" top="70">
@@ -66,12 +77,7 @@
             		<Label id="gyroscopeLabelDegreesZ" left="5" top="5">-</Label>
             	</View>
             </View>
-            <View id="view_light" class="view_sensorDetails">
-            	<View top="10" layout="horizontal" id="view_lightLabel" height='70' width="100%"><Label left="5">Light: </Label><Label id="status_light" class="statusLabel">No.</Label></View>
-            	<View layout="vertical"  top="70">
-            		<Label id="lightLabelLux" left="5" top="5">-</Label>
-            	</View>
-            </View>
+
             <View id="view_linear_acceleration" class="view_sensorDetails" height="250">
             	<View top="10" layout="horizontal" id="view_linearAccelerationLabel" height='70' width="100%"><Label left="5">Linear acceleration: </Label><Label id="status_linear_acceleration" class="statusLabel">No.</Label></View>
           		<View layout="vertical"  top="70">
@@ -128,8 +134,6 @@
             		<Label id="significantMotion" left="5" top="5">-</Label>
             		<Label id="significantMotionNumber" left="5" top="5">-</Label>
             	</View>
-            
-            
             </View>
 
 

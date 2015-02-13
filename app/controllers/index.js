@@ -122,6 +122,10 @@ for (i in sensorList){
 			sensor.removeEventListener('update', sensorsCallback);
 			Alloy.createController('lightDemo').getView().open();
 		});
+		$.lightDemo2.addEventListener('click',function(e){
+			sensor.removeEventListener('update', sensorsCallback);
+			Alloy.createController('lightDemoFlash').getView().open();
+		});
 	}
 
 
@@ -194,18 +198,32 @@ var sensorsCallback = function(e) {
 };
 
 //sensor.addEventListener('update', sensorsCallback);
-Ti.Android.currentActivity.addEventListener('pause', function(e) {
-	Ti.API.info("removing sensorsCallback on pause");
+/*Ti.Android.currentActivity.addEventListener('pause', function(e) {
 	sensor.removeEventListener('update', sensorsCallback);
 });
+
 Ti.Android.currentActivity.addEventListener('resume', function(e) {
-	Ti.API.info("adding sensorsCallback on resume");
+	sensor.addEventListener('update', sensorsCallback);
+});
+*/
+
+$.win.addEventListener('close', function() {
+	sensor.removeEventListener('update', sensorsCallback);
+	$.destroy();
+});
+
+$.win.addEventListener('pause', function(e) {
+	sensor.removeEventListener('update', sensorsCallback);
+});
+
+$.win.addEventListener('resume', function(e) {
 	sensor.addEventListener('update', sensorsCallback);
 });
 
 $.start.addEventListener('click', function(e) {
 	sensor.addEventListener('update', sensorsCallback);
 });
+
 $.stop.addEventListener('click', function(e) {
 	sensor.removeEventListener('update', sensorsCallback);
 });
@@ -217,4 +235,4 @@ function viewInfos(type){
 
 
 
-$.index.open();
+$.win.open();

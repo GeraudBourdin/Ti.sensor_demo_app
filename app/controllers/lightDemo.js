@@ -32,15 +32,19 @@ $.win.addEventListener('open', function() {
 	sensor.addEventListener('update', sensorsCallback);
 });
 
+
 $.win.addEventListener('close', function() {
+	sensor.removeEventListener('update', sensorsCallback);
+	sensor.setBrightnessMode(initialBrightnessMode);
+	$.destroy();
+});
+
+$.win.addEventListener('pause', function(e) {
+	sensor.removeEventListener('update', sensorsCallback);
 	sensor.setBrightnessMode(initialBrightnessMode);
 });
 
-Ti.Android.currentActivity.addEventListener('pause', function(e) {
-	Ti.API.info("removing sensorsCallback on pause");
-	sensor.removeEventListener('update', sensorsCallback);
-});
-Ti.Android.currentActivity.addEventListener('resume', function(e) {
-	Ti.API.info("adding sensorsCallback on resume");
+$.win.addEventListener('resume', function(e) {
+	sensor.setBrightnessMode(sensor.SCREEN_BRIGHTNESS_MODE_MANUAL);
 	sensor.addEventListener('update', sensorsCallback);
 });

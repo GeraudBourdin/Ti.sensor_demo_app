@@ -18,4 +18,20 @@ var sensorsCallback = function(e) {
 		}
 	}
 };
-sensor.addEventListener('update', sensorsCallback); 
+//sensor.addEventListener('update', sensorsCallback); 
+$.win.addEventListener('open', function() {
+	sensor.addEventListener('update', sensorsCallback);
+});
+
+$.win.addEventListener('close', function() {
+	sensor.removeEventListener('update', sensorsCallback);
+	$.destroy();
+});
+
+$.win.addEventListener('pause', function(e) {
+	sensor.removeEventListener('update', sensorsCallback);
+});
+
+$.win.addEventListener('resume', function(e) {
+	sensor.addEventListener('update', sensorsCallback);
+});

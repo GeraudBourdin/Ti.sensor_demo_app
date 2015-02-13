@@ -1,0 +1,10 @@
+<Alloy>
+	<Window id="win">
+			<View height="100%" width="100%" layout="vertical">
+				<Label id="lux" top="10">-</Label>
+				<Label id="brightness" top="10">-</Label>
+				<Label id="initialBrightnessModeText" top="10" width="100%">-</Label>
+				<Label id="updatedBrightnessModeText" top="10" width="100%">-</Label>
+			</View>
+	</Window>
+</Alloy>

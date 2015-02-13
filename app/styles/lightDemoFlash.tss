@@ -1,0 +1,12 @@
+"Window": {
+	backgroundColor:"white",
+	layout:'vertical'
+}
+"Label": {
+	color:"black",
+	left:5
+}
+"View": {
+	width:"100%",
+	layout:'horizontal'
+}

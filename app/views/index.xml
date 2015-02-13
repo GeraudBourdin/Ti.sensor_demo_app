@@ -1,5 +1,5 @@
 <Alloy>
-	<Window>
+	<Window id="win">
 		<ScrollView layout="vertical" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="true" height="100%" width="100%">
 			
 			<View class="view_sensorDetails" height="70" >
@@ -11,9 +11,10 @@
             	<View top="10" layout="horizontal" id="view_lightLabel" height='70' width="100%"><Label left="5">Light: </Label><Label id="status_light" class="statusLabel">No.</Label></View>
             	<View layout="vertical"  top="30">
             		<Label id="lightLabelLux" left="5" top="5">-</Label>
-            		<Button id="lightDemo1" title="Demo" top="10" width="250" height="50" />
+            		<Button id="lightDemo1" title="Screen brightness" top="10" width="250" height="50" />
+            		<Button id="lightDemo2" title="Flash light" top="10" width="250" height="50" />
             	</View>
-            </View>	
+            </View>
             
             
             <View id="view_accelerometer"  class="view_sensorDetails" height="350">
